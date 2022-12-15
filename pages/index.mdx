@@ -1,11 +1,33 @@
+import Image from 'next/image'
+import { Callout } from 'nextra-theme-docs'
+
+
 # Introduction
  
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+In the next few months you will work on a **project-based internship** while being mentored by our 
+award-winning scientists. The purpose of this workshop is to arm you with the necessary technical skills needed to make the most out of your upcoming internship.
 
-## What is Nextra?
+The workshop will consist of walkthrough slides and code stored in a shared git repository. The learning objectives are built upon the personalised data science process depicted in the flowchart below.
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+![introduction](/introduction.png)
 
-## Documentation
+## Enter the Simulation
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+Congratulations! You are a data scientist or data engineer recently employed at Bear Bank; a new up and coming digital bank. 
+Customer fraud is one aspect of the banking business that requires a lot of attention. Scammers are constantly trying to lure and trick unsuspecting customers with carefully crafted emails and SMSes. In your company, there is data science team dedicated to understanding and modelling fraudulent transactions. 
+
+A data scientist named John Doe, was working on detecting spam from text messages (SMS), with the idea of alerting customers in real time if the message is spam or not. John did some experimentation on a jupyter notebook and claims his model got a really high accuracy. Unfortunately, John has submitted his leave request, as he wants to fulfill his dream of glacier hiking.
+As a result of John's immediate departure, you are tasked with getting to grips with his code, organizing the code into functions, deploying the project, including proper documentation, and more. Don't feel too overwhelmed, we know you are just starting out, so we have prepared slides and walkthroughs to guide you along the way.
+
+## High Level Overview
+
+Upon customer request, Bear Bank sends their received SMS to it’s spam detection model, 
+which then returns the probability of the message being spam. If the probability of spam is high, the customer is alerted. 
+
+![hlo](/hlo.png)
+
+<Callout type="info" emoji="ℹ️">
+  Let's go over the task of this Workshop
+</Callout>
+
+The central theme of this workshop is to successfully move John Doe’s code from Jupyter notebooks -> Python scripts that are production ready, intuitive and are well documented. 

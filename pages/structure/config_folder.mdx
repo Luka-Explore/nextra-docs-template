@@ -1,0 +1,47 @@
+# Creating Config folder 
+
+This is the first step in creating your new project structure. In this slide, we will create a directory called config. In this directory, we will store the components needed for the project. Inside the config directory, you will create a config.py and a parameters.yaml file.
+
+### Step 1 of 3: Create the config folder
+
+In your home project directory, go to the terminal window and type the following:
+
+```python showLineNumbers
+$ mkdir
+$ cd config
+$ touch config.py parameters.yaml
+```
+The first line creates the folder, the second line changes location to the new folder, and the third 
+line creates the files.
+![config_folder](/config_folder.png)
+
+### Step 2 of 3: Populating config.py
+
+Inside the empty config.py file, add the following code
+
+
+```python showLineNumbers {10}
+from pathlib import Path
+# Directories
+BASE_DIR = Path(__file__).parent.parent.absolute()
+CONFIG_DIR = Path(BASE_DIR, "config")
+DATA_DIR = Path(BASE_DIR, "data")
+
+DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+#Public repository for the datasets used in the Explore Data Science Academy
+DATA_PATH = "insert_path"
+```
+In the DATA_PATH on line 10, you need to replace “insert_path” with the correct data path. The path is in John Doe’s jupyter notebook, see if you can find it.
+
+### Step 3 of 3: Populating parameters.yaml
+
+In this step you will add the parameters that are relevant to the functions that you create, such as data pre-processing, splitting data and model training. For now we will focus only on the random_state parameter.
+
+Go to the parameters.yaml file, and add random_state: 42, as shown below
+
+```python showLineNumbers
+#config/parameters.yml
+random_state: 42
+```
+
